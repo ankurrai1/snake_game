@@ -1,29 +1,31 @@
 const PORT=8000;
 const http  = require('http');
 const fs = require('fs');
+
 const getContentType=function(file){
   let contentTypes = {
-    '.js':'text/javascript',
-    '.html':'text/html',
-    '.css':'text/css',
-    '.jpeg':'image/jpeg',
-    '.txt':'text/plain',
-    '.pdf':'text/plain',
-    '.jpg':'image/jpg',
-    '.gif':'image/gif',
+    'js':'text/javascript',
+    'html':'text/html',
+    'css':'text/css',
+    'jpeg':'image/jpeg',
+    'txt':'text/plain',
+    'pdf':'text/plain',
+    'jpg':'image/jpg',
+    'gif':'image/gif',
   }
-  let fileExtension = file.split(".").slice(-1)[0]);
+  let fileExtension = file.split(".").slice(-1)[0];
   return contentTypes[fileExtension];
 }
 
 const requestHandler = function(req,res){
-  let file = req.url=='/'? 'snake.html' :req.url.slice(1);
+  let file = req.url=='/'? 'index.html' :req.url.slice(1);
+  console.log(req.url,req.methd);
   if(fs.existsSync(file)){
     if(req.method=="POST"){
       req.on('data',function(text){
         storeComment(text.toString());
-        return;
       });
+      return;
     }
     let contentType = getContentType(file);
     res.setHeader('content-Type',contentType);
