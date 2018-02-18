@@ -19,7 +19,6 @@ const getContentType=function(file){
 
 const requestHandler = function(req,res){
   let file = req.url=='/'? 'index.html' :req.url.slice(1);
-  console.log(req.url,req.methd);
   if(fs.existsSync(file)){
     if(req.method=="POST"){
       req.on('data',function(text){
