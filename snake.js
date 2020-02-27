@@ -54,7 +54,6 @@ Snake.prototype.generatedFood = function(){
   this.foodPosition = foodPosition;
 }
 
-
 Snake.prototype.didSnakeEatFood = function(){
   let snakeHead = this.snakePositions.slice(-1);
   return this.foodPosition == snakeHead;
