@@ -25,17 +25,17 @@ const drawSnake = function(){
 
 const updateDisplay = function(text){
   document.getElementById("display").innerText = text;
-}
+};
 
 
 const actionOnArrowKeys = function(event){
   snake.key = event.key;
-}
+};
 
 const moveSnakeAndDisplay = function(){
   snake.updateSnakePos(snake.key);
   updateDisplayOfGame();
-}
+};
 
 const updateDisplayOfGame = function(){
   if(snake.didSnakeEatFood()){
