@@ -12,7 +12,7 @@ const updateSnakeOnDisplay = function(){
   newSnakePositions.map(function(snakePosition){
     document.getElementById(snakePosition).className="snake";
   });
-}
+};
 
 const drawSnake = function(){
   let head = snake.snakePositions[0];
@@ -21,7 +21,7 @@ const drawSnake = function(){
     let snakePart = document.getElementById(id);
     snakePart.className = "snake";
   }
-}
+};
 
 const updateDisplay = function(text){
   document.getElementById("display").innerText = text;
