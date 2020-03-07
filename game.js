@@ -3,7 +3,7 @@ let snake = new Snake();
 const showFood = function(){
   let foodPosition = snake.foodPosition;
   document.getElementById(foodPosition).className = "food";
-}
+};
 
 const updateSnakeOnDisplay = function(){
   let tail = snake.tail;
