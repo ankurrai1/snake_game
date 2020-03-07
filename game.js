@@ -41,14 +41,14 @@ const updateDisplayOfGame = function(){
   if(snake.didSnakeEatFood()){
     snake.snakePositions.push(snake.foodPosition);
     snake.generatedFood();
-  }
+  };
   if(snake.isGameOver()){
     updateDisplay("GAME OVER");
     return;
-  }
+  };
   showFood();
   updateSnakeOnDisplay();
-}
+};
 
 const loadGame = function(){
   let sizeOfGrid = snake.sizeOfGrid;
