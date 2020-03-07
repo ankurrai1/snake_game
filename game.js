@@ -57,6 +57,6 @@ const loadGame = function(){
   snake.generatedFood();
   window.addEventListener("keydown",actionOnArrowKeys);
   setInterval(moveSnakeAndDisplay,60);
-}
+};
 
 window.onload = loadGame;
