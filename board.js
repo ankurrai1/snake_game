@@ -15,4 +15,4 @@ const createGrid = function(cell,rows){
     table.appendChild(row);
   }
   body.appendChild(table);
-}
+};
