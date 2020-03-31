@@ -34,7 +34,6 @@ Snake.prototype.updateSnakePosLeft = function (ref) {
   ref.tail = tail;
 };
 
-
 Snake.prototype.updateSnakePos = function(key){
   let actions ={
     "ArrowDown":this.updateSnakePosToDown,
